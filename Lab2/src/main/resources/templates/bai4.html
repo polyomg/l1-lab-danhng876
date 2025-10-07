@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4 - Product Form</title>
+</head>
+<body>
+<h2>Bài 4 - Nhập sản phẩm</h2>
+
+<form th:action="@{/bai4/save}" method="post" th:object="${product}">
+    <p>Tên: <input type="text" th:field="*{name}"></p>
+    <p>Giá: <input type="number" th:field="*{price}" step="0.01"></p>
+    <button>Lưu</button>
+</form>
+
+<hr>
+
+<h3>Thông tin sản phẩm nhập</h3>
+<ul>
+    <li>Tên: <span th:text="${product.name}"></span></li>
+    <li>Giá: <span th:text="${product.price}"></span></li>
+</ul>
+<hr>
+<h3>Danh sách sản phẩm mẫu</h3>
+<ul>
+    <li th:each="item : ${items}" th:text="${item.name + ' - ' + item.price}"></li>
+</ul>
+
+</body>
+</html>
