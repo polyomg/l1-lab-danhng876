@@ -5,8 +5,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping("/bai1")  // ✅ đổi từ /ctrl thành /bai1
+@RequestMapping("/bai1")
 public class OkController {
+
+    // ✅ Thêm method này để hiển thị form
+    @GetMapping("/form")
+    public String form() {
+        return "bai1"; // trỏ tới file src/main/resources/templates/bai1.html
+    }
 
     @PostMapping("/ok")
     public String m1(Model model) {
