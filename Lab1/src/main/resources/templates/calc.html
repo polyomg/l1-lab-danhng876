@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<h1>Tính toán HCN</h1>
+<form action="/calc/result" method="post">
+    <label>Chiều rộng:</label>
+    <input type="number" step="0.1" name="width"> <br>
+    <label>Chiều dài:</label>
+    <input type="number" step="0.1" name="height"> <br>
+    <button type="submit">Tính</button>
+</form>
+
+<div th:if="${area != null}">
+    <p>Chiều rộng: <span th:text="${width}"></span></p>
+    <p>Chiều dài: <span th:text="${height}"></span></p>
+    <p>Diện tích: <span th:text="${area}"></span></p>
+    <p>Chu vi: <span th:text="${perimeter}"></span></p>
+</div>
+</body>
+</html>
