@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang Quản Trị</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container py-5">
+    <div class="card shadow border-0">
+        <div class="card-header bg-danger text-white text-center fw-bold">
+            🛡️ TRANG QUẢN TRỊ
+        </div>
+        <div class="card-body text-center">
+            <h5 class="text-secondary">Xin chào! Bạn đang ở khu vực quản trị.</h5>
+            <p class="text-muted">Chỉ người có quyền <strong>admin</strong> mới được truy cập.</p>
+            <a href="/" class="btn btn-outline-primary mt-3">🏠 Trang chủ</a>
+            <a href="/auth/logout" class="btn btn-outline-danger mt-3 ms-2">🚪 Đăng xuất</a>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
